@@ -1,0 +1,81 @@
+<style>
+	#slides {
+		margin: 0 auto;
+		position: relative;
+		width: 1400px;
+		height: 537px;
+		overflow: hidden;
+	}
+	.slides_container {
+		display: none;
+		height: 537px;
+		overflow: hidden;
+	}
+	.slides_container div.slide {
+		width: 1400px;
+		height: 537px;
+		display: block;
+	}
+	.slides_container img {
+		width: 1400px;
+		height: 537px;
+		display: block;
+	}
+	.pagination {
+		margin: 0 auto;
+		list-style: none;
+		z-index: 9999;
+		position: absolute;
+		bottom: 15px;
+		right: 360px;
+	}
+	.pagination li {
+		float: left;
+		margin: 0 auto;
+	}
+	.pagination li a {
+		display: block;
+		width: 18px;
+		height: 0;
+		padding-top: 18px;
+		background-position: 0 0;
+		float: left;
+		overflow: hidden;
+		background-image: url(images/img_circle.png);
+	}
+	.pagination li.current a, .pagination li.current a:hover {
+		background-position: -23px -0px;
+	}
+	.pagination li a:hover {
+		background-position: 0px -0px;
+	}
+</style>
+
+<script type="text/javascript">
+$(function(){			
+	$("#slides").slides({
+		preload: true,
+		preloadImage: "images/loading.gif",
+		play: 5000,
+		pause: 2500,
+		hoverPause: false
+	});
+	var mw = $(".mbox").width() + 10;
+	var ml = $(".mbox").length;	
+	$(".themes").width(mw*ml);
+	$(".t_menu li").mouseover(function(){
+		var index = $(this).index();
+		$(".themes").animate({left:-mw*index,opacity:1},500);
+	})
+});
+</script>
+
+<div id="slides" class="s_lb">
+	<div class="slides_container">
+		<div class="slide"><a href="javascript:;"><img src="../images/img_index_1.jpg" /></a></div>
+		<div class="slide"><a href="javascript:;"><img src="../images/img_index_2.jpg" /></a></div>
+		<div class="slide"><a href="javascript:;"><img src="../images/img_index_3.jpg" /></a></div>
+		<div class="slide"><a href="javascript:;"><img src="../images/img_index_4.jpg" /></a></div>
+	</div>
+</div>
+<div class="gap_row"></div>

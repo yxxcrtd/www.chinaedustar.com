@@ -1,0 +1,182 @@
+﻿<div id="top_info">证券简称：中教股份，证券代码：430176&nbsp;&nbsp;免费服务热线：400-811-2828</div>
+
+<div id="top_menu">
+	<div id="menu">
+		<div id="menu_left">
+			<img src="./images/img_logo.jpg" />
+		</div>
+		
+		<div id="menu_right">
+			<ul id="menu_right_ul">
+				<li>
+					<a href="/">网站首页</a>
+				</li>
+				<li>
+					<a href="equipment.html">现代教育装备</a>
+					<ul>
+						<li>
+							<a href="equipment.html">整体解决方案</a>
+						</li>
+						<li>
+							<a href="geography.html">&nbsp;&nbsp;地理专用教室</a>
+						</li>
+						<li>
+							<a href="science.html">&nbsp;&nbsp;小学科学教室</a>
+						</li>
+						<li>
+							<a href="tech.html">&nbsp;&nbsp;数学化科技馆</a>
+						</li>
+						<li>
+							<a href="explore.html">&nbsp;&nbsp;数学探究实验室</a>
+						</li>
+						<li>
+							<a href="equipment.html">装备系列产品</a>
+						</li>
+						<li>
+							<a href="globe.html">&nbsp;&nbsp;数字星球系统</a>
+						</li>
+						<li>
+							<a href="math.html">&nbsp;&nbsp;数学学科装备</a>
+						</li>
+						<li>
+							<a href="geometry.html">&nbsp;&nbsp;&nbsp;&nbsp;立体几何模型</a>
+						</li>
+						<li>
+							<a href="dimensional.html">&nbsp;&nbsp;&nbsp;&nbsp;三维立体几何模型数学系统</a>
+						</li>
+						<li>
+							<a href="modularize.html">&nbsp;&nbsp;&nbsp;&nbsp;模块化几何模型搭建套装</a>
+						</li>
+						<li>
+							<a href="voice.html">&nbsp;&nbsp;语音立体地形图</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="education.html">教育信息化</a>
+					<ul>
+						<li>
+							<a href="ecologicalization.html">&nbsp;生态化教学研系统</a>
+						</li>
+						<li>
+							<a href="groups.html">&nbsp;&nbsp;&nbsp;网络教研平台</a>
+						</li>
+						<li>
+							<a href="networks.html">&nbsp;&nbsp;&nbsp;网络课程教学平台</a>
+						</li>
+						<li>
+							<a href="resources.html">&nbsp;&nbsp;&nbsp;学科资源群平台</a>
+						</li>
+						<li>
+							<a href="realname.html">&nbsp;&nbsp;&nbsp;实名制网络学习空间</a>
+						</li>
+						<li>
+							<a href="generate.html">&nbsp;&nbsp;&nbsp;生成性资源建设平台</a>
+						</li>
+						<li>
+							<a href="multimedia.html">&nbsp;&nbsp;&nbsp;多媒体素材库</a>
+						</li>
+						<li>
+							<a href="javascript:;">&nbsp;数字化教育管理系统</a>
+						</li>
+						<li>
+							<a href="assistance.html">&nbsp;&nbsp;&nbsp;网络协同办公系统</a>
+						</li>
+						<li>
+							<a href="student.html">&nbsp;&nbsp;&nbsp;学籍管理系统</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="cooperation.html">渠道合作</a>
+					<ul>
+						<li>
+							<a href="cooperation.html">&nbsp;&nbsp;合作共赢&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="contact.html">&nbsp;&nbsp;联系我们</a>
+						</li>
+						<li>
+							<a href="network.html">&nbsp;&nbsp;营销网络</a>
+						</li>
+						<li>
+							<a href="document.html">&nbsp;&nbsp;资料下载</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="service.html">服务与支持</a>
+					<ul>
+						<li>
+							<a href="service.html">&nbsp;服务承诺&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li>
+							<a href="download.html">&nbsp;下载专区</a>
+						</li>
+						<li>
+							<a href="register_online.html">&nbsp;远程注册 - 在线注册</a>
+						</li>
+						<li>
+							<a href="register_message.html">&nbsp;远程注册 - 短信注册</a>
+						</li>
+						<li>
+							<a href="register_update.html">&nbsp;远程注册 - 下载更新</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="us.html">关于我们</a>
+					<ul>
+						<li>
+							<a href="us.html">&nbsp;&nbsp;关于中教启星&nbsp;</a>
+						</li>
+						<li>
+							<a href="credentials.html">&nbsp;&nbsp;荣誉资质</a>
+						</li>
+						<li>
+							<a href="job.html">&nbsp;&nbsp;工作机会</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var timeout = 500;
+	var closetimer = 0;
+	var ddmenuitem = 0;
+	
+	function jsddm_open() {
+		jsddm_canceltimer();
+		jsddm_close();
+		ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');
+	}
+	
+	function jsddm_close() {
+		if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');
+	}
+	
+	function jsddm_timer() {
+		closetimer = window.setTimeout(jsddm_close, timeout);
+	}
+	
+	function jsddm_canceltimer() {
+		if(closetimer) {
+			window.clearTimeout(closetimer);
+			closetimer = null;
+		}
+	}
+	
+	$(function() {
+		$('#menu_right_ul > li').bind('mouseover', jsddm_open);
+		$('#menu_right_ul > li').bind('mouseout',  jsddm_timer);
+	});
+	
+	document.onclick = jsddm_close;
+</script>
+
+
+

@@ -1,0 +1,52 @@
+<div class="gap_row"></div>
+<div id="product1">
+	<div class="product_tips">
+		<a id="sticky1" href="#" rel="product1.html">
+			<img src="./images/img_product_tip.jpg" />
+		</a>
+	</div>
+</div>
+<div class="gap_column6">&nbsp;</div>
+<div id="product2">
+	<div class="product_tips">
+		<a id="sticky2" href="#" rel="product2.html">
+			<img src="./images/img_product_tip.jpg" />
+		</a>
+	</div>
+</div>
+<div class="gap_column7">&nbsp;</div>
+<div id="product3"></div>
+<div class="gap_row"></div>
+
+<link type="text/css" rel="styleSheet" href="./css/cluetip.css" />
+<script type="text/javascript" src="./js/jquery.cluetip.js"></script>
+<script type="text/javascript">
+$(function() {
+	$("#sticky1").cluetip({
+			width: 322,
+			sticky : true,
+			leftOffset : -313,
+			topOffset : -170,
+			mouseOutClose : true,
+			showTitle : false,
+			closeText : '',
+			cluezIndex : 10000,
+			positionBy : 'fixed',
+			dropShadow : false,
+			cluetipClass :  'default'
+		});
+	$("#sticky2").cluetip({
+		width: 322,
+		sticky : true,
+		leftOffset : -312,
+		topOffset : -170,
+		mouseOutClose : true,
+		showTitle : false,
+		closeText : '',
+		cluezIndex : 10000,
+		positionBy : 'fixed',
+		dropShadow : false,
+		cluetipClass :  'default2'
+	});
+});
+</script>
